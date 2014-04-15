@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+
+<html lang="ja">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<title>光太郎と影二郎の会話</title>
+
+	<link rel="stylesheet" href="base-min.css">
+
+</head>
+
+<body>
+
+	<section id="talk">
+
+		<h1 class="talkTitle">What is Shadow Dom?</h1>
+
+		<article class="taro">
+			<p>光太郎: 「にゃー！」</p>
+		</article>
+
+		<article class="taro">
+			<p>光太郎: 「む？」</p>
+		</article>
+
+		<article class="coming">
+			<p>光太郎: 「それは、オレの…」</p>
+			<p>ナレーション: 「おっと、しましまの逆立つ茶色の毛！」</p>
+			<p>光太郎: 「フシャー!!!!!!!!!!」 </p>
+		</article>
+
+		<article>
+			<p>光太郎: 「ごはんだ…！」 </p>
+		</article>
+
+	</section>
+
+	<template id="shadow">
+
+		<section id="shadow-element">
+
+			<style>
+
+				article {
+					margin: 5px 10px;
+					padding: 10px 15px;
+				}
+
+				.shadow-title {
+					color: #031634;
+				}
+
+				.shadow-taro {
+					border: 1px solid #036564;
+				}
+
+				.shadow-coming {
+					border: 1px solid #031634;
+				}
+
+				.shadow-jiro {
+					border: 1px solid #033649;
+				}
+
+			</style>
+
+			<article class="shadow-title">
+				<content select="h1.talkTitle"></content>
+			</article>
+
+			<article class="shadow-taro">
+				<content select="article.taro"></content>
+				<p>ゴゴゴゴ……</p>
+			</article>
+
+			<article class="shadow-coming">
+				<h3>這いよる影…</h3>
+				<p>影二郎: …！</p>
+				<content select="article.coming"></content>
+			</article>
+
+			<article class="shadow-jiro">
+				<content select="article"></content>
+				<p>影二郎: 「違うな！」</p>
+				<p>ナレーション: 「おっと、きじとらの逆立つ灰色の毛！」</p>
+				<p>影二郎: 「フシャー!!!!!!!!!!」 </p>
+				<p>影二郎: 「オレのだ…！」 </p>
+			</article>
+
+		</section>
+
+	</template>
+
+	<script src="main.js"></script>
+
+</body>
+
+</html>
