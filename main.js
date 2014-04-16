@@ -5,6 +5,8 @@
 
 	if (!shadowHost.createShadowRoot) {
 		console.log('%c' + 'ShadowDomサポートしてないよ', 'color: green');
+
+		return false;
 	}
 
 	// DOMに車道のルートを作る
